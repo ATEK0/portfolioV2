@@ -6,12 +6,9 @@
 :root {
   --rt: 215deg;
   --rtm: -215deg;
+  --fcolor: #8400ff;
 }
 
-p {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
 
@@ -147,6 +144,7 @@ body {
 
 nav {
   position: fixed;
+  z-index: 3;
   top: 0;
   width: 100%;
   line-height: 60px;
@@ -430,7 +428,91 @@ span.cursor {
 
 hr {
     width: 10%;
-    border-top: 4px solid #8400ff;
+    border-top: 5px solid #8400ff;
+    border-radius: 5px;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: right;
+  justify-content: right;
+  height: auto;
+}
+
+.skill {
+  padding: 10px;
+  margin: 5px;
+  width: fit-content;
+  background-color: #8400ff;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.third-wrapper {
+  background-color: whitesmoke;
+  padding: 50px;
+}
+
+.third-wrapper .title {
+  color: #000;
+  letter-spacing: 3px;
+  font-weight: bold!important;
+}
+
+.year-ind {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.exp-hr {
+  width: 5%;
+  margin:5px;
+}
+
+.exp-title {
+  transform: translateY(-8px);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.exp-card {
+  background-color: white;
+  width: 20vw;
+  min-width: 200px;
+  border-radius: 10px;
+
+  margin: 15px;
+
+  -webkit-box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42);
+  box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42); 
+}
+
+.exp-card-title {
+  color: var(--fcolor);
+  font-weight: bold;
+  padding: 10px;
+}
+
+.exp-card hr {
+  width: 90%;
+  border-top: 4px solid #8400ff;
+  margin-top: -5px;
+  border-radius: 5px;
+}
+
+.exp-card-content {
+  font-size: 14px;
+  color: black;
+  padding: 10px;
 }
 
 
