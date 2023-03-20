@@ -104,3 +104,7 @@ const onMouseMove = (e) =>{
 }
 
 document.addEventListener('mousemove', onMouseMove);
+
+
+//onhover one only
+
