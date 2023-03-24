@@ -108,3 +108,21 @@ document.addEventListener('mousemove', onMouseMove);
 
 //onhover one only
 
+const skills = document.querySelectorAll('.skill');
+skills.forEach(skill => {
+  skill.addEventListener('mouseover', () => {
+    skills.forEach(otherSkill => {
+      if (otherSkill !== skill) {
+        otherSkill.classList.add('not-hovered');
+      }
+    });
+  });
+  
+  skill.addEventListener('mouseout', () => {
+    skills.forEach(otherSkill => {
+      if (otherSkill !== skill) {
+        otherSkill.classList.remove('not-hovered');
+      }
+    });
+  });
+});
