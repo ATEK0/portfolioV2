@@ -1,0 +1,26 @@
+<style>
+    .backCard {
+        cursor: pointer;
+        position: fixed;
+        margin-top: 10px;
+        top: 0;
+        left: 0;
+        width: fit-content;
+        color: purple;
+        height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: whitesmoke;
+        border-radius: 2px 15px 15px 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 500;
+        border: 1px gray solid;
+      }
+</style>
+
+<a href="{{url_for('home.homePage')}}">
+<div class="backCard">
+    Back to Portfolio &#10096;
+</div></a>

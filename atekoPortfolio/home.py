@@ -20,7 +20,11 @@ def homeP():
 
 @home.route('/home', methods=["GET"])
 def homePage():
-    
     return render_template("/home/index.html")
+
+@home.route('/projects/portfolioV1', methods=["GET"])
+def projectPortfolioV1():
+    
+    return render_template("/pfV1/index.html")
 
 

@@ -1,0 +1,71 @@
+
+.buttontalk {
+  color: white;
+  border: 4px solid #fd6647;
+  border-radius:15px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 15px;
+  font-family: consolas;
+  letter-spacing:5px;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  /*filter: drop-shadow(0 0 15px #db3eb1) drop-shadow(0 0 50px #db3eb1) contrast(2) brightness(2);*/
+  transition: .5s;
+}
+  
+.buttontalk:hover {
+  color: white;
+  border: 4px solid #fb3d3d;
+  background-color: #fb3d3d;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px #fb3d3d) contrast(2) brightness(2);
+}
+
+.buttontalk-movel {
+  margin: 30px;
+
+
+  z-index: 6;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+  color: white;
+  border: 4px solid #fb3d3d;
+  background-color: #fb3d3d;
+  border-radius:15px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: consolas;
+  letter-spacing:5px;
+  cursor: pointer;
+  font-weight: bold;
+  /*filter: drop-shadow(0 0 15px #db3eb1) drop-shadow(0 0 50px #db3eb1) contrast(2) brightness(2);*/
+  transition: .5s;
+}
+
+.buttontalk-movel {
+  display: none;
+  transform: scale(1.01);
+  filter: drop-shadow(0 0 20px #fb3d3d) contrast(2) brightness(2);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .buttontalk-movel {
+    display: block !important;
+    z-index: 3;
+    
+  }
+
+  .buttontalk {
+    display: none !important;
+  }
+
+} 

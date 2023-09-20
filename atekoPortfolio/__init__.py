@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_login import current_user
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_cors import CORS
 from os import path
 
 from werkzeug.security import generate_password_hash
@@ -9,6 +10,7 @@ from werkzeug.security import generate_password_hash
 from flask_login import LoginManager
 
 
+cors = CORS()
 db = SQLAlchemy()
 migrate = Migrate()
 
@@ -22,15 +24,18 @@ def create_app():
     
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://codebyat_atekoKing:video_GAMER0109@185.12.116.140:3306/codebyat_portfolio' # para usar com MySQL Online
     
+    cors.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
     
     
     
     from .home import home
+    from .cities import cities
 
     
     app.register_blueprint(home, url_prefix="/")
+    app.register_blueprint(cities, url_prefix="/")
 
     
     @app.errorhandler(404)

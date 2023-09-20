@@ -88,7 +88,6 @@ $(window).on("scroll", function () {
   } else {
     $("nav").removeClass("black");
     $(".menu-icon").removeClass("black");
-
   }
 });
 
