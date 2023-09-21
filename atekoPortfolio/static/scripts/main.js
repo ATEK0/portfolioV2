@@ -81,28 +81,28 @@ $(document).ready(function () {
 
 // Scrolling Effect
 
-$(window).on("scroll", function () {
-  if ($(window).scrollTop()) {
-    $("nav").addClass("black");
-    $(".menu-icon").addClass("black");
-  } else {
-    $("nav").removeClass("black");
-    $(".menu-icon").removeClass("black");
-  }
-});
+// $(window).on("scroll", function () {
+//   if ($(window).scrollTop()) {
+//     $("nav").addClass("black");
+//     $(".menu-icon").addClass("black");
+//   } else {
+//     $("nav").removeClass("black");
+//     $(".menu-icon").removeClass("black");
+//   }
+// });
 
 //cursor after mouse
-let circle = document.getElementById('circle');
+// let circle = document.getElementById('circle');
 
-const onMouseMove = (e) =>{
-  setTimeout(() => {
-    circle.style.left = e.pageX + 'px';
-  circle.style.top = e.pageY + 'px';
-}, 50);
+// const onMouseMove = (e) =>{
+//   setTimeout(() => {
+//     circle.style.left = e.pageX + 'px';
+//   circle.style.top = e.pageY + 'px';
+// }, 50);
   
-}
+// }
 
-document.addEventListener('mousemove', onMouseMove);
+// document.addEventListener('mousemove', onMouseMove);
 
 
 //onhover one only
@@ -148,3 +148,8 @@ window.addEventListener("scroll", reveal);
 
 window.addEventListener('load', reveal);
 
+var rotation = 0;
+$("#navPicture").on("click", () => {
+  rotation += 360
+  $("#navPicture").css("transform", "rotate(" + rotation + "deg)");
+})

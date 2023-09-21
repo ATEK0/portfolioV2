@@ -132,17 +132,23 @@ body {
 
 .logo {
   line-height: 60px;
-  position: fixed;
   float: left;
-  margin: 16px 46px;
-  color: #000;
+  margin: 16px 26px;
+  color: #fff;
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
+
+  position: absolute;
+  top: 0;
+}
+
+#navPicture {
+  transition: 1s all;
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   top: 0;
   width: 100%;
@@ -169,8 +175,7 @@ nav ul {
 
 nav.black ul {
   text-decoration: none;
-  background: #ffffff;
-}
+  background: linear-gradient(-70deg, rgba(104,25,185,1) 0%, rgba(101,53,149,1) 100%);}
 
 nav ul li {
   text-decoration: none;
@@ -180,14 +185,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
   transition: 0.5s all;
 }
 nav ul li a:hover {
   text-decoration: none;
-  color: #8400ff;
   font-size: 16px;
 }
 
@@ -207,8 +211,7 @@ nav ul li a:hover {
 
 @media (max-width: 900px) {
   .logo {
-    position: fixed;
-    color: black !important;
+    color: white !important;
     top: 0;
     margin-top: 16px;
   }
@@ -240,6 +243,7 @@ nav ul li a:hover {
 
   .menu-icon {
     display: block;
+    color: white;
     transition: 1s all;
   }
 
@@ -262,24 +266,30 @@ nav ul li a:hover {
 
 .presentation-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   
 }
 
 .presentation-content {
   background-color: rgb(245, 245, 245);
-  border-bottom: #8400ff 3px solid;
+  /* border-bottom: #8400ff 3px solid; */
   /* font-size: 6rem !important; */
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
+  /* padding: 100px; */
+  color: white;
+  text-align: left; 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  background-image: url("../assets/images/bg-present.png");
+
+  background: rgb(104,25,185);
+  background: linear-gradient(-70deg, rgba(104,25,185,1) 0%, rgba(101,53,149,1) 100%); 
+  /* background-image: url("../assets/images/bg-present.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 } 
 
 .presentation-content span {
@@ -287,54 +297,106 @@ nav ul li a:hover {
   border: none;
   color: white;
   height: auto;
-  background-color: #8400ff;
   font-weight: bold;
 }
 
+
 .buttons-pres {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
   margin-top: 20px;
 }
 
 .buttons-pres input[type="button"] {
   text-align: center;
-  margin: 10px;
   letter-spacing: 1px;
-  border: none;
-  width: 45%;
+  border: 4px solid #442069;
   height: 3rem;
   min-width: 125px;
   max-width: 200px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: white;
-  background: linear-gradient(110deg, #8400ff 0%, #9a2eff 91%);
+  color: #442069;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  /* background: linear-gradient(110deg, #8400ff 0%, #9a2eff 91%); */
   border-radius: 8px;
   transition: 0.5s all;
 }
 
 .buttons-pres input[type="button"]:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  background-color: #b567ff;
+  border: 4px solid #b567ff;
+  color: white;
 }
 
 .socials-pres {
   bottom: 0;
   position: absolute;
-  display: inline-flex;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   width: auto;
+
   background-color: rgb(245, 245, 245);
-  border-top: #8400ff 3px solid;
-  border-right: #8400ff 3px solid;
-  border-left: #8400ff 3px solid;
+
   border-bottom: rgb(245, 245, 245) 3px solid !important;
 }
 
-.socials-pres i {
+.socials-pres::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  transform: translateX(-40px) translateY(2.5px);
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 50%;
+  background-color: #6629a5;
+}
+
+.socials-pres::after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  transform: translateX(40px) translateY(2.5px);
+  right: 0;
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 50%;
+  background-color: #6629a5;
+}
+
+.blocker {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-20px) translateY(8px);
+  bottom: 0;
+  background-color: whitesmoke;
+  width: 25px;
+  height: 25px;
+}
+
+.blocker2 {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(20px) translateY(10px);
+  bottom: 0;
+  right: 0;
+  background-color: whitesmoke;
+  width: 25px;
+  height: 25px;
+}
+
+.socials-pres i, .socials-pres svg {
   transition: 0.5s all;
   display: flex;
   justify-content: center;
@@ -343,17 +405,19 @@ nav ul li a:hover {
   height: auto;
   margin: 10px;
   padding: 7px;
-  border-radius: 5px;
-  color: black;
+
+  color: #6725a9;
   font-size: 3vw;
 }
 
 .socials-pres a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.socials-pres i:hover {
-  background-color: #a94effa9;
+.socials-pres i:hover, .socials-pres svg:hover {
   transform: scale(1.06) translateY(-3px);
 }
 
@@ -380,35 +444,37 @@ span.cursor {
   background-color: whitesmoke;
   width: 3px !important;
   height: 90%;
-  border-top: 3px solid #8400ff;
-  border-bottom: 3px solid #8400ff;
+
   padding-right: 2px;
   animation: blink-cursor 1s infinite;
 }
-
-
-/* @media (min-width:320px)  { 
-  #circle {display: none!important;
-  } smartphones, iPhone, portrait 480x320 phones 
-  .socials-pres i {
-    font-size: 5vw;
+ @media (min-width:641px) {
+  .socials-pres {
+    right: 0;
+    margin-right: 40px;
   }
+  .presentParg {
+    text-align: left;
+  }
+
 }
-
-@media (min-width:481px)  { 
-  #circle {display: none!important;
-  } portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-  .socials-pres i {
-    font-size: 5vw;
-  }
-} */
 
 @media (max-width:641px)  { 
   #circle {display: none!important;
   }/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
   .socials-pres i {
-    font-size: 5vw;
+    font-size: 7vw;
   }
+  .socials-pres {
+    display: inline-flex;
+  }
+  .presentParg {
+    text-align: left;
+  }
+  .presentation-content {
+    align-items: center;
+  }
+
   .paddMobile {
     padding-top: 30px;
   }
@@ -437,7 +503,7 @@ span.cursor {
   #circle {display: none!important;
   }/* tablet, landscape iPad, lo-res laptops ands desktops */ 
   .socials-pres i {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
@@ -445,7 +511,7 @@ span.cursor {
   #circle {display: block!important;
   }/* big landscape tablets, laptops, and desktops */ 
   .socials-pres i {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
