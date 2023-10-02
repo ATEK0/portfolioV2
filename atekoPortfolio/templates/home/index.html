@@ -7,14 +7,17 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <meta description="Afonso Almeida developed his portfolio with a lot of love and joy. Here you can know about his life and carreer">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/images/favicon.ico')}}" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styleMouseScroll.css')}}" />
     <title>Afonso Almeida</title>
+
   </head>
   <body id="body" class="overflow">
-
     <!-- INTRO FAVICON -->
     <div id="svgintro" class="svgintro">
       <svg
@@ -60,19 +63,15 @@
         <i class="fa fa-bars fa-2x"></i>
       </div>
       <div class="logo">
-        <img
-          id="navPicture" src="{{url_for('static', filename='assets/images/me-face.jpg')}}"
-          style="border-radius: 100px; width: 40px"
-        />
-        ATEK0
+         //ATEKO
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#knowme">ABOUT</a></li>
-          <li><a href="#career">CAREER</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="">CONTACT</a></li>
+          <li><a href="#home">HOME<hr></a></li>
+          <li><a href="#knowme">ABOUT<hr></a></li>
+          <li><a href="#career">CAREER<hr></a></li>
+          <li><a href="#projects">PROJECTS<hr></a></li>
+          <li><a href="">CONTACT<hr></a></li>
         </ul>
       </div>
     </nav>
@@ -83,12 +82,38 @@
 
       <!-- PRESENTATION -->
       <div class="presentation-wrapper fade-in" id="home">
-        <div class="presentation-content">
+        <div class="presentation-content ">
+          <svg
+          class="backSVGPreesentation "
+          data-name="Camada 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 258.14 149.29"
+          style="width:  3000px; height: 200vh;fill: rgba(255,255,255,0.2);position: absolute;left: 0;"        >
+          <path
+
+            d="M128.74,34.51c11.73,19.24,23.45,38.46,35.21,57.75-.18,.02-.33,.05-.48,.05-5.19,0-10.38,0-15.56,0-.46,0-.64-.27-.83-.58-1.2-1.94-2.41-3.88-3.6-5.82-3.6-5.91-7.18-11.82-10.78-17.73-1.46-2.39-2.95-4.76-4.4-7.15-1.86-3.07-3.7-6.16-5.55-9.24-.65-1.08-1.3-2.15-1.95-3.23-.42-.69-.37-1.05,.31-1.67,.3,.48,.61,.94,.9,1.42,.89,1.47,1.79,2.93,2.67,4.41,.51,.85,.99,1.72,1.51,2.57,.7,1.16,1.44,2.29,2.14,3.45,1.23,2.04,2.44,4.08,3.67,6.12,.64,1.06,1.32,2.1,1.98,3.14,.13,.21,.24,.43,.37,.63,.28,.45,.63,.72,1.22,.72,4.07-.02,8.15-.01,12.22-.02,.18,0,.35-.06,.53-.1-.07-.18-.11-.38-.2-.54-1.37-2.25-2.75-4.51-4.13-6.76-1.32-2.15-2.66-4.29-3.98-6.44-.83-1.35-1.61-2.73-2.43-4.09-.8-1.32-1.62-2.63-2.41-3.95-1.71-2.83-3.41-5.66-5.11-8.49-.56-.93-1.13-1.85-1.68-2.78-.42-.7-.34-1.04,.36-1.67Z"
+          />
+          <path
+
+            d="M117.74,52.32c.2,.29,.35,.49,.48,.71,1.44,2.36,2.87,4.71,4.3,7.07,1.07,1.78,2.13,3.57,3.2,5.35,.19,.32,.2,.61,0,.93-.99,1.59-1.98,3.19-2.96,4.79-2.72,4.41-5.44,8.83-8.16,13.24-1.57,2.54-3.15,5.08-4.72,7.62-.16,.26-.36,.39-.67,.36-.27-.02-.54,0-.9,0,.1-.21,.15-.33,.22-.45,1.13-1.85,2.28-3.69,3.41-5.53,1.72-2.81,3.43-5.62,5.15-8.42,.19-.31,.39-.61,.56-.92,.07-.13,.1-.28,.14-.42-.14-.03-.27-.08-.41-.08-2.11,0-4.22,0-6.33,0-2.17,0-4.33,0-6.5-.01-.33,0-.54,.09-.71,.37-1.3,2.12-2.6,4.23-3.91,6.35-1.46,2.36-2.93,4.71-4.39,7.06-.28,.45-.56,.91-.83,1.37-.46,.78-.56,.82-1.61,.63,8.21-13.33,16.4-26.63,24.63-40Z"
+          />
+          <path
+
+            d="M139.91,88.77c-.39,0-.73,.04-1.05-.02-.15-.02-.31-.19-.4-.34-1-1.62-2-3.25-2.98-4.88-.19-.31-.4-.43-.77-.43-3.88,.02-7.77,.03-11.65,.02-.37,0-.57,.14-.73,.47-.75,1.51-1.53,3.01-2.3,4.51-.41,.8-.61,.88-1.61,.66,.05-.15,.09-.29,.15-.42,.96-1.87,1.93-3.74,2.88-5.62,.17-.33,.37-.45,.74-.45,2.86,.01,5.72,0,8.58,0,1.62,0,3.23,0,4.85,.03,.2,0,.48,.15,.59,.32,1.22,1.96,2.42,3.93,3.62,5.9,.03,.04,.03,.1,.07,.24Z"
+          />
+          <path
+
+            d="M124.83,76.32c.33-.68,.65-1.36,.99-2.02,.73-1.43,1.46-2.85,2.19-4.28,.24-.46,.36-.47,.63-.03,1.04,1.73,2.07,3.47,3.11,5.21,.22,.37,.44,.73,.68,1.12-.35,.17-.51,.04-.65-.2-1.05-1.79-2.11-3.58-3.18-5.37-.07-.11-.19-.19-.29-.28-.08,.1-.18,.18-.23,.29-.89,1.75-1.77,3.51-2.65,5.26-.1,.2-.18,.49-.59,.3Z"
+          />
+          <path
+
+            d="M131.19,76.37h-5.26l-.05-.11c.12-.06,.24-.18,.35-.18,1.54-.01,3.09-.01,4.63,0,.12,0,.24,.11,.36,.17-.01,.04-.02,.08-.04,.12Z"
+          />
+        </svg>
           <div class="container">
             <div class="row col-12">
-              <div class="col-sm-12 col-md-8">
-
-                <h1 class="name">
+              <div class="col-sm-12 col-md-7 d-flex flex-column justify-content-center pb-5 ">
+                <span style="letter-spacing: 2.1px;">Afonso Almeida</span>                <h1 class="name">
                   HEY, I'M 
                   <div style="display: inline-block;padding-left: 5px;">
                     <span id="typed-text" class="typed-text"></span
@@ -98,83 +123,81 @@
                 </h1>
   
                 <div class="col-12 presentParg">
-                  <p style="font-weight: 300;font-size: 1.3rem;">I'm a 19 year old software developer from Portugal, studying software development.<br>My goals are to achieve sucess in every project that i embrace (and master python)!</p>
-                  <div class="buttons-pres">
-                    <div class="row">
-                      <div class="col-12">
-                        <a href="https://github.com/ATEK0" class="w-100"></a><input type="button" value="PROJECTS"/></a>
-                        <a href="#career" class="w-100"><input type="button" value="CAREER" /></a>
-                      </div>
-                    </div>
-                  </div>
+
+                  <p style="font-size:20px">I'm a <span id="age" style="font-weight: normal;"></span> years old developer that enjoys to learn new stuff and be challenged!</p>
+
+                  <script>
+                      var age = new Date().getFullYear() - 2004;
+                      document.getElementById("age").textContent = age;
+                  </script>
+                  
                 </div>
-  
-                
 
               </div>
-  
+
+              <div class="d-sm-none d-md-block col-md-5">
+            
+              </div>
             </div>
           </div>
 
 
-          
-
-
-          
-
-
           <div class="socials-pres">
-
             <div class="blocker"></div>
             <div class="blocker2"></div>
-            <!-- <a href="https://www.instagram.com/oafonsoalmeida" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> Falta colocar refs para os sites -->
             <a href="https://github.com/ATEK0" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://stackoverflow.com/users/16716210/atek0" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/afonso-almeida-b32733232/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="mailto:info@codebyateko.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <a href="https://leetcode.com/ATEK0/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104a5.35 5.35 0 0 0-.125.513a5.527 5.527 0 0 0 .062 2.362a5.83 5.83 0 0 0 .349 1.017a5.938 5.938 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523a2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
+            <a href="https://leetcode.com/ATEK0/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104a5.35 5.35 0 0 0-.125.513a5.527 5.527 0 0 0 .062 2.362a5.83 5.83 0 0 0 .349 1.017a5.938 5.938 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523a2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
           </div>
-        </div>
 
+          <svg viewBox="0 0 1920 200" class="wave" style="position: absolute;bottom: 0;transform: rotateX(180deg) translateY(-10px);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(245, 245, 245, 1)" d="M 0 200 C 388.40000000000003 200 582.5999999999999 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(245, 245, 245, 1)" d="M 970 110 C 1350 110 1540 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path> </svg>
+        </div>
       </div>
       
       <!-- FIM PRESENTATION -->
 
       <!-- second card -->
     <div id="knowme" class="second-wrapper ">
-      <h2 class="title">KNOW ME BETTER</h2>
-      <hr class="undelined">
+      <h2 class="title pb-5">/ ABOUT ME</h2>
+      <!-- <hr class="undelined"> -->
 
       <div class="container">
         <div class="row d-flex">
           <div class="col card2 paddMobile" style="text-align: left;">
-            <h4 class="title fade-in">Afonso Almeida</h4>
-            <p class="knowBetterParag fade-in">Hi! I'm <b style="color:#8400ff;">Afonso Almeida (ATEK0)</b>, a 19 yr old worker/student from Porto, Portugal. I'm just a simple guy launching himself into the coding world. In my free time I like to play videogames and go to the gym.
-            I've been interested into coding for a few years (since 2018, when I was 14), started with creating some simple minecraft servers. Atm I'm specializing myself in <b style="color:#8400ff;">ASP.NET MVC C#, API's, Python and JavaScript Frameworks.</b>
-          I'm studying Software Developent at ISTEC Porto. My goals are to do a PhD in AI.
-          I teach teens to code at Sharkcoders where I teach Python, WebDevelopment and android APPs and I'm also working at TECIAN, a startup in Porto working with ASP.NET MVC.
+            <h4 class="title-mid fade-in">Hi! Im Afonso Almeida</h4>
+            <p class="knowBetterParag fade-in">A 19 yr old worker/student from Porto, Portugal. <br>
+              Leading a team remotely at Hits-Norte, I’m just a simple guy launching himself into the coding world.<br><br> 
+              I've been interested into coding for a few years (since 2018, when I was 14), started with creating some simple minecraft servers.<br>
+              At the moment I'm learning and mastering API's, Python and JavaScript frameworks like ReactJS and JQuery.<br><br>
+              I'm studying Software Developent at ISTEC Porto and my goals are to do a PhD in AI. I also teach teens to code at Sharkcoders where I teach Python, WebDevelopment and android APPs.
+              
           </p>
           </div>
           <div class="col card2 fade-in" style="text-align: right;">
-            <h4 class="title">Skills</h4>
+            <h4 class="title-mid">I’ve worked with</h4>
             <div class="skills-wrapper"> <!--Criar algo para dar informações quando passar o rato por cima-->
               <p class="skill">MySQL</p>
               <p class="skill">HTML</p>
-              <p class="skill">WebAnimations</p>
+              <p class="skill">Tkinter</p>
               <p class="skill">CSS</p>
               <p class="skill">JavaScript</p>
               <p class="skill">Python</p>
               <p class="skill">Git</p>
-              <p class="skill">Github</p>
-              <p class="skill">ASP.NET MVC</p>
+              <p class="skill">Flask</p>
+              <p class="skill">ASP.NET</p>
               <p class="skill">Photoshop</p>
               <p class="skill">Illustrator</p>
               <p class="skill">Figma</p>
               <p class="skill">Linux</p>
-              <p class="skill">VM's</p>
+              <p class="skill">VM</p>
               <p class="skill">Team Work</p>
               <p class="skill">Leadership</p>
               <p class="skill">Networks</p>
+              <p class="skill">API</p>
+              <p class="skill">MongoDB</p>
+              <p class="skill">SQL</p>
             </div>
           </div>
         </div>
@@ -183,111 +206,33 @@
       <!-- end second card -->
 
     <div id="career" class="third-wrapper">
-      <h2 class="title fade-in">EXPERIENCE</h2>
+      <h2 class="title fade-in">/ EXPERIENCE</h2>
+
       <div class="container">
-        <hr class="undelined fade-in">
-        <div class="year-ind fade-in">
-          <hr class="exp-hr"><p class="exp-title">2020 - Starting year</p><hr class="exp-hr exp-mobile">
-        </div>
-        <div class="card-wrapper">
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">Coding</div>
-          <hr>
-          <div class="exp-card-content">Started studying programming in my 10th year. Here I learned some basic logics and started to learn C++ and HTML.
-            Also finished my first year with an average of 20 values in programming.
+        <section class="experience-container">
+          
+          <div class="experience-container-title">
+            <h1>2023</h1>
+            <p>This was the year that i landed my first remote job and sent to production my first online shop</p>
           </div>
-        </div>
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">Servers & OS</div>
-          <hr>
-          <div class="exp-card-content">Got to know and work with VM's and servers.I've installed and configured a Windows Server with the most important services and also a LAMP server.
-          </div>
-        </div>
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">Design</div>
-          <hr>
-          <div class="exp-card-content">Started doing some <a href="colocar as fotos and stuff numa pasta do google drive">photo manipulations, logos, banners</a> in photoshop just for fun, then I got the taste of it😬
-          </div>
-        </div>
-
-        </div>
-
-        <div class="year-ind fade-in">
-          <hr class="exp-hr"><p class="exp-title">2021 - Getting more imersive in school</p><hr class="exp-hr exp-mobile">
-        </div>
-        <div class="card-wrapper">
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">Visual Basic</div>
-          <hr>
-          <div class="exp-card-content">Got to know and work with VB and started doing a lot of GUI programs.
-          </div>
-        </div>
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">MySQL</div>
-          <hr>
-          <div class="exp-card-content">Got introduced to MySQL, found it amazing to work because now I could store my data!
-          </div>
-        </div>
-        <div class="exp-card fade-in">
-          <div class="exp-card-title">JavaScript</div>
-          <hr>
-          <div class="exp-card-content">Finally something interesting to use with HTML, it was getting boring. This year I've made a tic-tac-toe game with pure JS.
-          </div>
-        </div>
-
-        </div>
-
-        <div class="year-ind fade-in">
-          <hr class="exp-hr"><p class="exp-title">2022 - This has to be worth it</p><hr class="exp-hr exp-mobile">
-        </div>
-        <div class="card-wrapper fade-in">
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">Final Project</div>
-            <hr>
-            <div class="exp-card-content">Had to do my <a href="https://skye-pap.web.app/">final project</a> to finish high school. In partnership with 2 more friends, we made an RC (in this case, controlled with an APP) car with a raspberry pi (my python journey started here😁). 
+          
+          <div class="experience-pages">
+            <div>
+              <h1>project 1</h1>
+              <p>Teste testestetsetssresrsere</p>
+            </div>
+            <div>
+              <h1>project 2</h1>
+              <p>Teste testestetsetssresrsere</p>
+            </div>
+            <div>
+              <h1>project 3</h1>
+              <p>Teste testestetsetssresrsere</p>
             </div>
           </div>
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">Internship</div>
-            <hr>
-            <div class="exp-card-content">This was my first professional experience. I got a 3 months internship in <a href="https://www.inesctec.pt/pt">INESC TEC</a>. I gave continuity to an old PhD final project in ReactJS. Finished the internship with 19 values.
-            </div>
-          </div>
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">High School Over!</div>
-            <hr>
-            <div class="exp-card-content">I finished my high school in August 2022 with 18.2 values overall. This last 3 years were the years where i learned most about the programming world.
-            </div>
-          </div>
-        </div>
-
-        <div class="year-ind fade-in">
-          <hr class="exp-hr"><p class="exp-title">2023 - What comes after High School?</p><hr class="exp-hr exp-mobile">
-        </div>
-        <div class="card-wrapper fade-in">
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">SharkCoders</div>
-            <hr>
-            <div class="exp-card-content">Landed my first job at <a href="https://www.sharkcoders.pt/">SharkCoders</a>, a coding school for kids and teens. I teach Python, WebDevelopment and APP development.
-            </div>
-          </div>
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">TECIAN</div>
-            <hr>
-            <div class="exp-card-content"><a href="https://tecian.pt/">TECIAN</a> is a software development company in Porto who works to multiple other companys. I work with ASP.NET MVC.
-            </div>
-          </div>
-          <div class="exp-card fade-in">
-            <div class="exp-card-title">ISTEC Porto</div>
-            <hr>
-            <div class="exp-card-content">Instead of taking a degree i opted to take a CTESP in <a href="https://istec-porto.pt/ctesp-desenvolvimento-de-software/">Software Development at ISTEC Porto</a>, it's almost like a degree but more practical.
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-
     </div>
-
 
     <div id="projects" class="fourth-wrapper">
       <h2 class="title fade-in">Projects</h2>
@@ -315,10 +260,15 @@
       </div> -->
     </div>
 
-      <footer>
-        <p>©2023 All rights reserved to Afonso Almeida | Developed with 💜 by ATEK0</p>
-      </footer>
-    </div>
+    <footer>
+      <p>©2023 All rights reserved to Afonso Almeida | Developed with 💜 by ATEK0</p>
+    </footer>
+
+
+  </div>
+  
+
+
 
     
     <!-- SCRIPTS -->
@@ -328,7 +278,6 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
-    <script src="{{url_for('static', filename='scripts/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
     <script src="{{url_for('static', filename='scripts/text-write.js')}}"></script>
 
@@ -338,16 +287,30 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" 
+      integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="{{url_for('static', filename='scripts/paralaxEffect.js')}}"></script>
+
+
   </body>
 </html>

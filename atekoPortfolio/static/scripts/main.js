@@ -1,3 +1,10 @@
+$(document).ready(function () {
+
+  $(".menu-icon").on("click", function () {
+    $("nav ul").toggleClass("showing");
+  });
+});
+
 var x = 0;
 document.getElementById("navs").style.display = "none";
 function myFunction() {
@@ -73,36 +80,8 @@ function upscale() {
 
 //NAVBAR
 
-$(document).ready(function () {
-  $(".menu-icon").on("click", function () {
-    $("nav ul").toggleClass("showing");
-  });
-});
 
-// Scrolling Effect
 
-// $(window).on("scroll", function () {
-//   if ($(window).scrollTop()) {
-//     $("nav").addClass("black");
-//     $(".menu-icon").addClass("black");
-//   } else {
-//     $("nav").removeClass("black");
-//     $(".menu-icon").removeClass("black");
-//   }
-// });
-
-//cursor after mouse
-// let circle = document.getElementById('circle');
-
-// const onMouseMove = (e) =>{
-//   setTimeout(() => {
-//     circle.style.left = e.pageX + 'px';
-//   circle.style.top = e.pageY + 'px';
-// }, 50);
-  
-// }
-
-// document.addEventListener('mousemove', onMouseMove);
 
 
 //onhover one only
@@ -148,8 +127,3 @@ window.addEventListener("scroll", reveal);
 
 window.addEventListener('load', reveal);
 
-var rotation = 0;
-$("#navPicture").on("click", () => {
-  rotation += 360
-  $("#navPicture").css("transform", "rotate(" + rotation + "deg)");
-})
