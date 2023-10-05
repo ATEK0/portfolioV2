@@ -5,7 +5,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <meta description="Afonso Almeida developed his portfolio with a lot of love and joy. Here you can know about his life and carreer">
 
@@ -13,6 +14,7 @@
     
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/images/favicon.ico')}}" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/macbook.css')}}" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/styleMouseScroll.css')}}" />
     <title>Afonso Almeida</title>
 
@@ -79,7 +81,10 @@
 
     <div id="body2" class="body2">
       <!-- MainIntro -->
-
+      <div class="download-cv invisible">
+        <div class="addMessage"></div>
+        <img class="rounded-circle" width="60" height="60" src="{{url_for('static', filename='assets/images/me-face2.jpg')}}">
+      </div>
       <!-- PRESENTATION -->
       <div class="presentation-wrapper fade-in" id="home">
         <div class="presentation-content ">
@@ -211,54 +216,269 @@
       <div class="container">
         <section class="experience-container">
           
-          <div class="experience-container-title">
+          <div class="experience-container-title year2023">
             <h1>2023</h1>
             <p>This was the year that i landed my first remote job and sent to production my first online shop</p>
           </div>
           
           <div class="experience-pages">
-            <div>
-              <h1>project 1</h1>
-              <p>Teste testestetsetssresrsere</p>
+
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>June 2023 - current at Hits-Norte</small>
+                <h1 class="exp-card-title">Full-Stack developer and Trainee</h1>
+                <p class="exp-card-content">Created high scalable and modular management web platforms for hotels and company services with Flask and JQuery while training some employees</p>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         Python 
+                  </div>
+                  <div class="exp-skill">
+                         Flask 
+                  </div>
+                  <div class="exp-skill">
+                         JQuery 
+                  </div>
+                  <div class="exp-skill">
+                         Full-Stack 
+                  </div>
+                  <div class="exp-skill">
+                         SQL
+                  </div>
+                  <div class="exp-skill">
+                         API 
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h1>project 2</h1>
-              <p>Teste testestetsetssresrsere</p>
+
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>April 2023 - September 2023 at MarketingParaPME's</small>
+                <h1 class="exp-card-title">Freelance Portfolio and Service Shopping</h1>
+                <p class="exp-card-content">My job was to create a simple and captive portfolio for a marketing company. The website has payments integration so that users can buy services.</p>
+                <img src="{{url_for('static', filename='assets/images/projects/mktPMES.png')}}" class="w-75 rounded">
+                <div class="link-container">
+                    <a href="https://www.marketingparapmes.pt/" class="text-decoration-none" target="_blank">
+                        <i class="icon-link fa fa-link"></i> MarketingParaPME's
+                    </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         Python 
+                  </div>
+                  <div class="exp-skill">
+                         Flask 
+                  </div>
+                  <div class="exp-skill">
+                         Full-Stack 
+                  </div>
+                  <div class="exp-skill">
+                         SQL 
+                  </div>
+                  <div class="exp-skill">
+                         IfThenPay
+                  </div>
+                  <div class="exp-skill">
+                         API
+                  </div>
+                  <div class="exp-skill">
+                         Email Sending
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h1>project 3</h1>
-              <p>Teste testestetsetssresrsere</p>
-            </div>
+
           </div>
         </section>
+
+
+        <section class="experience-container">
+          
+          <div class="experience-container-title year2022" style="margin-top: 0px !important;">
+            <h1>2022</h1>
+            <p>I got my first coding job and started giving coding classes, also my online presence got bigger</p>
+          </div>
+          
+          <div class="experience-pages" style="margin-top: 0px !important;">
+
+            <div class="exp-card-container">
+              <div class="exp-card" style="margin-top:40px">
+                <small>September 2022 - December 2022 | Portfolio Development</small>
+                <h1 class="exp-card-title">My Portfolio's Version 1</h1>
+                <p class="exp-card-content">This was the first time that i built my portfolio, it was nice and i learned a a lot.</p>
+                <img src="{{url_for('static', filename='assets/images/projects/portfolio V1.png')}}" class="rounded w-75">
+                <div class="link-container">
+                  <a href="http://aalmeidavisualdevs.epizy.com/" class="text-decoration-none" target="_blank">
+                    <i id="icon-link" class="fa fa-link"></i> ATEKfolio V1
+                  </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         HTML 
+                  </div>
+                  <div class="exp-skill">
+                         CSS 
+                  </div>
+                  <div class="exp-skill">
+                         JavaScript 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>September 2022 - current | Specialization</small>
+                <h1 class="exp-card-title">Software Development</h1>
+                <p class="exp-card-content">I started my first year studying software development at ISTEC Porto. I learned new skills like mongoDB, POO, Swift, Full-Stack developed, among others.</p>
+                <div class="link-container">
+                  <a href="http://istec-porto.pt/" class="text-decoration-none" target="_blank">
+                    <i id="icon-link" class="fa fa-link"></i> ISTEC Porto
+                  </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         WebDev
+                  </div>
+                  <div class="exp-skill">
+                         VMs 
+                  </div>
+                  <div class="exp-skill">
+                         POO 
+                  </div>
+                  <div class="exp-skill">
+                         Databases 
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>Sep 2022 - June 2023 | ASP.NET Developer</small>
+                <h1 class="exp-card-title">TECIAN</h1>
+                <p class="exp-card-content">At TECIAN I was responsable for solving bugs and create new features for products already developed by the company</p>
+
+                <div class="link-container">
+                  <a href="https://tecian.pt/" class="text-decoration-none" target="_blank">
+                    <i id="icon-link" class="fa fa-link"></i> TECIAN
+                  </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         WebDev 
+                  </div>
+                  <div class="exp-skill">
+                         C# 
+                  </div>
+                  <div class="exp-skill">
+                         ASP.NET MVC 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>September 2022 - current | Teacher</small>
+                <h1 class="exp-card-title">SHARKCODERS</h1>
+                <p class="exp-card-content">Here I teach kids and teenagers the beauty of coding, here they have the oportunity to learn new skills and how to work with new technologies.</p>
+                <div class="link-container">
+                  <a href="http://aalmeidavisualdevs.epizy.com/" class="text-decoration-none" target="_blank">
+                    <i id="icon-link" class="fa fa-link"></i> SharkCoders
+                  </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         HTML 
+                  </div>
+                  <div class="exp-skill">
+                         CSS 
+                  </div>
+                  <div class="exp-skill">
+                         JavaScript 
+                  </div>
+                  <div class="exp-skill">
+                         Python 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="exp-card-container">
+              <div class="exp-card">
+                <small>April 2022 - July 2022 | Internship</small>
+                <h1 class="exp-card-title">INESC TEC</h1>
+                <p class="exp-card-content">This was my first professional experience. Here I worked in a PhD final project built in ReactJS. My internship at INESC TEC in FEUP buildings shown me how a working environment is like and what to expect from big projects.</p>
+                <div class="link-container">
+                  <a href="https://github.com/acoelho-fe-up-pt/app-python/tree/main" class="text-decoration-none" target="_blank">
+                    <i id="icon-link" class="fa fa-link"></i> Developed Project
+                  </a>
+                </div>
+                <div class="exp-skills-container">
+                  <div class="exp-skill">
+                         HTML 
+                  </div>
+                  <div class="exp-skill">
+                         CSS 
+                  </div>
+                  <div class="exp-skill">
+                         ReactJS 
+                  </div>
+                  <div class="exp-skill">
+                         NodeJS 
+                  </div>
+                  <div class="exp-skill">
+                         PostgresSQL
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
       </div>
     </div>
 
     <div id="projects" class="fourth-wrapper">
-      <h2 class="title fade-in">Projects</h2>
-      <p>In this section you can find all the most amazing projects that I've made or I'm developing at the moment</p>
-      <p>comming soon...</p>
-      <hr class="undelined">
-      <br>
-      <br>
-      <br>
-      <br>
+      <h2 class="title fade-in">/ Projects</h2>
+      <p>I've done some pretty cool stuff during my time as developer, check it out!!</p>
 
-      <!-- <div class="container">
-        <div class="flex-row card mt-4">
-          <div class="col-7"><img class="card-img" src="assets/images/projects/imagem.jpg"></div>
-          <div class="col-5 p-2">informações do projeto com botao para github</div>
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-6 col-sm-12">
+            <div class="project-card-left">
+              <div class="macbook-left">
+                <div class="screen">
+                  <div class="viewport" style="background-image: url('{{url_for('static', filename='assets/images/projects/mktPMES1.png')}}');"></div>
+                </div>
+                <div class="base"></div>
+                <div class="notch"></div>
+              </div>
+              <div class="project-content-left">
+                <h3>Flask WebApp</h3>
+                <p class="text-align-left">This website uses API's, JQuery and Flask to bring the user the most aesthetic and simple place to get info and buy.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="flex-row card mt-4">
-          <div class="col-5 p-2">informações do projeto com botao para github</div>
-          <div class="col-7 "><img class="card-img" src="assets/images/projects/imagem.jpg"></div>
-        </div>
-        <div class="flex-row card mt-4">
-          <div class="col-7"><img class="card-img" src="assets/images/projects/imagem.jpg"></div>
-          <div class="col-5 p-2">informações do projeto com botao para github</div>
-        </div>
-      </div> -->
+
+      </div>
+
     </div>
+    
+    <div id="projects" class="fifth-wrapper">
+      <h2 class="title">/ Get in Contact</h2>
+      <p>CONTACT FORM</p>
+
+    </div>
+
 
     <footer>
       <p>©2023 All rights reserved to Afonso Almeida | Developed with 💜 by ATEK0</p>
@@ -278,15 +498,9 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
     <script src="{{url_for('static', filename='scripts/text-write.js')}}"></script>
-
-    <!--  -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"

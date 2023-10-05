@@ -74,6 +74,34 @@ setTimeout(() => {
   document.getElementById("navs").style.display = "block";
 }, 4000);
 
+setTimeout(() => {
+  $(".download-cv").removeClass("invisible")
+}, 6000);
+
+setTimeout(() => {
+  $(".addMessage").append(`
+    <div class="download-cv-baloon">
+      Hey there! 😃
+    </div>
+  `)
+}, 8500);
+
+setTimeout(() => {
+  $(".addMessage").append(`
+    <div class="download-cv-baloon" style="margin-top: 15px">
+      Welcome to my portfolio! 😝
+    </div>
+  `)
+}, 9300);
+
+setTimeout(() => {
+  $(".addMessage").append(`
+    <div class="download-cv-baloon" style="cursor:pointer;margin-top: 15px">
+      You can download my CV here <i class="fa fa-download"></i>
+    </div>
+  `)
+}, 9800);
+
 function upscale() {
   document.getElementById("Camada_1").classList.add("expand");
 }

@@ -649,23 +649,18 @@ span.cursor {
 .not-hovered {
   background-color: #c080ff !important;
   transform: scale(0.9);
-
 }
 
 .experience-container {
-  height: 150vh;
   display: flex;
 }
 
 .experience-container-title {
   width: 50%;
-
   margin-top: 70px;
   margin-bottom: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-
-
 }
 
 .experience-container-title h1 {
@@ -686,49 +681,100 @@ span.cursor {
   line-height: normal;
 }
 
-.experience-pages p {
-  color: #BC7AF5;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-align: right;
-}
-
 .experience-pages {
   width: 50%;
   margin-top: 110px;
-  height: fit-content;
 }
 
 
-.experience-pages div {
+.exp-card-container {
   margin-left: 15px;
   padding-left: 15px;
-  height: 44vh;
+  padding-bottom: 15vh;
   display: flex;
   flex-direction: column;
   align-items: start;
   border-left: 3px solid #400F71; 
 }
 
-.experience-pages div::before {
+.experience-pages .exp-card-title::before {
   content: "";
   border: #000;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  background-color: black;
+  background-color: #BC7AF5;
   border-radius: 15px;
-}
-
-/* .third-wrapper {
-  background-color: whitesmoke;
-  padding: 50px;
-  padding-top: 0;
+  transform: translateX(-34px);
 }
 
 
+.exp-card{
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.exp-card small {
+  color: #BC7AF5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.exp-card-title {
+  color: #000;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.exp-card-content {
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.link-container {
+  color: white;
+  background-color: #7b21d66c;
+  padding: 2px 10px 2px 10px;
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 38px;
+  cursor: pointer;
+}
+
+.link-container a {
+  color: white;
+}
+
+.exp-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.exp-skills-container .exp-skill {
+  border-radius: 38px;
+  background: #7B21D6;
+  padding: 2px 10px 2px 10px;
+  color: white;
+  margin: 5px;
+  margin-left: 0 !important;
+  font-weight: bold;
+}
+
+
+/*
 .third-wrapper .exp-card hr {
   width: 100% !important;
   opacity: 1 !important;
@@ -803,11 +849,31 @@ span.cursor {
 
 .fourth-wrapper {
   padding: 50px;
-  padding-top: 0;
+  padding-top: 100px;
 }
 
 .image-project {
   max-height: 100%;
+}
+
+.project-card-left {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-content-left {
+  text-align: left;
+}
+
+.project-card-rigth {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-content-rigth {
+  padding-right: 50%;
 }
 
 
@@ -818,6 +884,7 @@ footer {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #d09dff;
   bottom:0;
+  height: 10vh;
 }
 
 .fade-in {
@@ -832,7 +899,77 @@ footer {
 }
 
 
+.download-cv {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  animation: bounce 2s ease;
+  z-index: 999;
+  animation-delay: 2s;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transition: .5s all;
+}
 
+.download-cv-baloon {
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(110,29,193,1) 0%, rgba(90,86,196,1) 100%);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-30px,-10px);
+
+  animation: fade-pop 1s ease;
+}
+
+@keyframes fade-pop {
+  from {
+    opacity: 0;
+  }
+  to {opacity: 1;}
+}
+
+.download-cv-baloon > * {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.download-cv-baloon::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid #5c51c4;
+  border-left: 25px solid transparent;
+  position: absolute;
+  right: 0;
+  transform: translate(-9px,27px);
+}
+
+.addMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
 
 .button-container {
   display: flex;
