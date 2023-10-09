@@ -23,6 +23,10 @@ html, body {
   overflow-x: hidden;
 }
 
+input:focus, textarea {
+  outline: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -774,79 +778,6 @@ span.cursor {
 }
 
 
-/*
-.third-wrapper .exp-card hr {
-  width: 100% !important;
-  opacity: 1 !important;
-}
-
-.year-ind {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.exp-hr {
-  width: 5%;
-  margin:5px;
-  border-top: 5px solid var(--fcolor);
-  border-radius: 15px;
-  opacity: 1 !important;
-}
-
-.exp-mobile {
-  display: none;
-}
-
-.exp-title {
-  transform: translateY(-8px);
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.exp-card {
-  background-color: white;
-  width: 20vw;
-  min-width: 200px;
-  border-radius: 10px;
-
-  margin: 15px;
-
-  -webkit-box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42);
-  -moz-box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42);
-  box-shadow: 0px 5px 12px -5px rgba(0,0,0,0.42); 
-}
-
-.exp-card-title {
-  color: var(--fcolor);
-  font-weight: bold;
-  padding: 10px;
-}
-
-.exp-card hr {
-  width: 90%;
-  border-top: 4px solid #8400ff;
-  margin-top: -5px;
-  border-radius: 5px;
-}
-
-.exp-card-content {
-  font-size: 16px;
-  color: black;
-  padding: 10px;
-}
-
-.exp-card-content a {
-  color: var(--fcolor);
-  text-decoration: underline;
-} */
-
-
 .fourth-wrapper {
   padding: 50px;
   padding-top: 100px;
@@ -857,32 +788,93 @@ span.cursor {
 }
 
 .project-card-left {
+  position: relative;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .project-content-left {
+  position: absolute;
   text-align: left;
+  margin-left: 47%;
+  padding-top: 25px;
+  padding-right: 10px;
 }
 
-.project-card-rigth {
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
+.project-content-left h3 {
+  padding-right: 5px;
+  width: fit-content;
+  font-weight: bold;
+  border-bottom: 3px solid #7B21D6;
+  margin-bottom: 30px;
 }
 
-.project-content-rigth {
-  padding-right: 50%;
+
+
+.fifth-wrapper {
+  padding: 50px;
 }
 
+.input-place {
+  margin-top: 20px;
+}
+
+.contact-input {
+  width: 100%;
+  height: 54px;
+  background-color: whitesmoke;
+  color: rgba(64, 15, 113, 0.80);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  border-bottom: 2px solid rgba(64, 15, 113, 0.80);
+
+  resize: none; 
+  max-height: 200px;
+  min-height: 54px;
+}
+
+.input-indication {
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #BC7AF5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.h-xl {
+  height: 108px;
+}
+
+.contactSubmitButton {
+  color: #400F71;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 2px solid #400F71;
+  background: #F5F5F5;
+  margin-top: 80px;
+  padding: 12px 35px 12px 35px;
+}
+
+.contactSubmitButton i {
+  font-size: 19px;
+}
 
 
 footer {
   text-align: center;
   padding: 20px;
   font-family: "Source Sans Pro", sans-serif;
-  background-color: #d09dff;
+  background: #BC7AF5;
   bottom:0;
   height: 10vh;
 }
@@ -914,18 +906,17 @@ footer {
 }
 
 .download-cv-baloon {
+  font-size: 13px;
   padding: 10px;
   background: linear-gradient(90deg, rgba(110,29,193,1) 0%, rgba(90,86,196,1) 100%);
   color: white;
   font-weight: bold;
   border-radius: 10px 10px 10px 10px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transform: translate(-30px,-10px);
-
+  transform: translate(-15px,-10px);
   animation: fade-pop 1s ease;
 }
 
@@ -949,13 +940,26 @@ footer {
   border-left: 25px solid transparent;
   position: absolute;
   right: 0;
-  transform: translate(-9px,27px);
+  transform: translate(-9px,24px);
 }
 
 .addMessage {
   display: flex;
   flex-direction: column;
   align-items: end;
+
+}
+
+.messageImage  {
+  transition: .5s all;
+}
+
+.rotation-open {
+  animation: rotation .5s ease linear;
+}
+
+.rotation-close {
+  animation: rotation .5s ease reverse;
 }
 
 @keyframes bounce {
@@ -969,6 +973,15 @@ footer {
   }
   80% { transform: translateX(10px); }
   100% { transform: translateX(0); }
+}
+
+@keyframes rotation {
+  from {
+    
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .button-container {

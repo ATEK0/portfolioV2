@@ -83,7 +83,7 @@
       <!-- MainIntro -->
       <div class="download-cv invisible">
         <div class="addMessage"></div>
-        <img class="rounded-circle" width="60" height="60" src="{{url_for('static', filename='assets/images/me-face2.jpg')}}">
+        <img class="rounded-circle messageImage" id="chatProfile" width="60" height="60" src="{{url_for('static', filename='assets/images/me-face2.jpg')}}">
       </div>
       <!-- PRESENTATION -->
       <div class="presentation-wrapper fade-in" id="home">
@@ -452,17 +452,18 @@
         <div class="row">
 
           <div class="col-md-6 col-sm-12">
-            <div class="project-card-left">
+            <div class="project-card-left shadow-sm">
+              <div class="project-content-left">
+                <h3>Flask WebApp</h3>
+                <p class="text-align-left">This website uses API's, JQuery and Flask to bring the user the most aesthetic and simple place to get informations, get in contact or just buy services.</p>
+                <button class="">Check Production</button>
+              </div>
               <div class="macbook-left">
                 <div class="screen">
                   <div class="viewport" style="background-image: url('{{url_for('static', filename='assets/images/projects/mktPMES1.png')}}');"></div>
                 </div>
                 <div class="base"></div>
                 <div class="notch"></div>
-              </div>
-              <div class="project-content-left">
-                <h3>Flask WebApp</h3>
-                <p class="text-align-left">This website uses API's, JQuery and Flask to bring the user the most aesthetic and simple place to get info and buy.</p>
               </div>
             </div>
           </div>
@@ -475,13 +476,36 @@
     
     <div id="projects" class="fifth-wrapper">
       <h2 class="title">/ Get in Contact</h2>
-      <p>CONTACT FORM</p>
+      <p class="font-weigth-bold">Got any questions, proposals or simply wanna say hi? Hit me up!</p>
+      
+      <div class="container" style="margin-top: 80px;">
+        <div class="row">
 
+          <div class="input-place col-sm-12 col-md-6 ">
+            <div class="input-indication">Your Name</div>
+            <input type="text" name="name" id="name" class="contact-input" placeholder="John Doe">
+          </div>
+          
+          <div class="input-place col-sm-12 col-md-6 ">
+            <div class="input-indication">Your Email Address</div>
+            <input type="email" name="name" id="name" class="contact-input" placeholder="johndoe@demo.com">
+          </div>
+
+          <div class="input-place col-sm-12 col-md-12 ">
+            <div class="input-indication">Your Message</div>
+            <textarea name="message" id="message" class="contact-input h-xl" placeholder="Hi Afonso, I work for company XYZ and we think that you hould fit perfectly in a project that we have in mind! When can you meet with us?"></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="contactSubmitButton">SEND MESSAGE <i class="fa fa-chevron-right"></i> </button>
+
+      </div>
     </div>
 
 
     <footer>
-      <p>©2023 All rights reserved to Afonso Almeida | Developed with 💜 by ATEK0</p>
+      <p>©<span id="year"></span> All rights reserved to Afonso Almeida | Developed with 💜 by ATEK0</p>
     </footer>
 
 
@@ -493,11 +517,7 @@
     
     <!-- SCRIPTS -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
     <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
     <script src="{{url_for('static', filename='scripts/text-write.js')}}"></script>

@@ -13,9 +13,7 @@ setInterval(incrementSeconds, 1000);
 var seconds = 0;
 function incrementSeconds() {
   seconds += 1;
-  if (seconds == 10) {
-    console.log("entrou na funcao");
-  }
+
 }
 
 function type() {

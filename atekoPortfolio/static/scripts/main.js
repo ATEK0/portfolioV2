@@ -1,8 +1,28 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
   $(".menu-icon").on("click", function () {
     $("nav ul").toggleClass("showing");
   });
+
+  var open = true
+  var rotation = 0
+  
+  $("#chatProfile").on("click", () => {
+    $(".addMessage").fadeToggle( "slow", "linear" );
+    if (open) {
+      rotation += 360
+      $(".messageImage").css("transform", 'rotate(' + rotation + "deg)")
+    } else {
+      rotation -= 360
+      $(".messageImage").css("transform", 'rotate(' + rotation + "deg)")
+    }
+    open = !open
+  })
+
+  const date = new Date().getFullYear()
+
+  $("#year").html(date)
+
 });
 
 var x = 0;
@@ -69,7 +89,7 @@ setTimeout(() => {
 }, 3900);
 setTimeout(() => {
   document.getElementById("svgintro").remove();
-  // document.getElementById("body").classList.remove("overflow");
+
   document.getElementById("body2").classList.add("show");
   document.getElementById("navs").style.display = "block";
 }, 4000);
@@ -96,18 +116,18 @@ setTimeout(() => {
 
 setTimeout(() => {
   $(".addMessage").append(`
-    <div class="download-cv-baloon" style="cursor:pointer;margin-top: 15px">
+    <div class="download-cv-baloon" id="downloadCV" style="cursor:pointer;margin-top: 15px">
       You can download my CV here <i class="fa fa-download"></i>
     </div>
   `)
 }, 9800);
+
 
 function upscale() {
   document.getElementById("Camada_1").classList.add("expand");
 }
 
 //NAVBAR
-
 
 
 
@@ -155,3 +175,4 @@ window.addEventListener("scroll", reveal);
 
 window.addEventListener('load', reveal);
 
+$("#")
