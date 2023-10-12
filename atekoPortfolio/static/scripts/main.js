@@ -10,10 +10,10 @@ $(document).ready(function () {
   $("#chatProfile").on("click", () => {
     $(".addMessage").fadeToggle( "slow", "linear" );
     if (open) {
-      rotation += 360
+      rotation -= 360
       $(".messageImage").css("transform", 'rotate(' + rotation + "deg)")
     } else {
-      rotation -= 360
+      rotation += 360
       $(".messageImage").css("transform", 'rotate(' + rotation + "deg)")
     }
     open = !open
