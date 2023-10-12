@@ -32,10 +32,12 @@ def create_app():
     
     from .home import home
     from .cities import cities
+    from .download import download
 
     
     app.register_blueprint(home, url_prefix="/")
     app.register_blueprint(cities, url_prefix="/")
+    app.register_blueprint(download, url_prefix="/")
 
     
     @app.errorhandler(404)

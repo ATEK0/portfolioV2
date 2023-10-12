@@ -117,7 +117,9 @@ setTimeout(() => {
 setTimeout(() => {
   $(".addMessage").append(`
     <div class="download-cv-baloon" id="downloadCV" style="cursor:pointer;margin-top: 15px">
-      You can download my CV here <i class="fa fa-download"></i>
+        <a href="/downloadCV" style="text-decoration: none; color:white;">
+          You can download my CV here <i class="fa fa-download"></i>
+        </a>
     </div>
   `)
 }, 9800);

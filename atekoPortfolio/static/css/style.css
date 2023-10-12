@@ -779,7 +779,7 @@ span.cursor {
 
 
 .fourth-wrapper {
-  padding: 50px;
+  padding-bottom: 50px;
   padding-top: 100px;
 }
 
@@ -794,6 +794,7 @@ span.cursor {
   overflow: hidden;
   height: 110%;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .project-content-left {
@@ -803,28 +804,55 @@ span.cursor {
   padding-top: 25px;
   padding-right: 10px;
   height: 90%;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-content-left h3 {
   padding-right: 5px;
   width: fit-content;
   font-weight: bold;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .projectBtn {
   background-color: white;
-  color: rgba(64, 15, 113, 0.80);
+  color: rgba(64, 15, 113, 0.80) !important;
+  text-decoration: none;
   border: 2px solid rgba(64, 15, 113, 0.80);
   width: 100%;
   transition: .5s all;
   height: 45px;
+  margin: 10px;
+}
+
+.projectBtn a {
+  color: rgba(64, 15, 113, 0.80) !important;
+  text-decoration: none;
+}
+
+.left {
+  left: 0;
+}
+
+.rigth {
+  right: 0;
 }
 
 .projectBtn:hover {
   color: white;
   border: 2px solid rgba(64, 15, 113, 0.80);
   background-color: rgba(64, 15, 113, 0.80);
+}
+
+.projectBtn:hover a {
+  color: white !important;
 }
 
 /* right side project card */
@@ -836,6 +864,7 @@ span.cursor {
   overflow: hidden;
   margin-top: 10px;
   height: 110%;
+  padding: 10px;
 }
 
 .project-content-rigth {
@@ -845,14 +874,21 @@ span.cursor {
   padding-top: 25px;
   padding-left: 10px;
   height: 90%;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-content-rigth h3 {
-  width: 100%;
+  width: fit-content;
   padding-right: 5px;
-  text-align: right;
+  text-align: center;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 /* end right side project card */
@@ -862,7 +898,8 @@ span.cursor {
 
 
 .fifth-wrapper {
-  padding: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .input-place {
@@ -933,6 +970,9 @@ footer {
   background: #BC7AF5;
   bottom:0;
   height: 10vh;
+
+  color: white;
+  font-weight: bold;
 }
 
 .fade-in {
